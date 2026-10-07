@@ -63,6 +63,15 @@ def train(
 
     with mlflow.start_run():
 
+        # Bonus 1: khi chay trong GitHub Actions (tracking len DagsHub), gan tag de
+        # truy nguoc tu MLflow run ve commit va lan chay pipeline tuong ung
+        if os.environ.get("GITHUB_RUN_ID"):
+            mlflow.set_tags({
+                "github_sha": os.environ.get("GITHUB_SHA", ""),
+                "github_run_id": os.environ["GITHUB_RUN_ID"],
+                "github_event": os.environ.get("GITHUB_EVENT_NAME", ""),
+            })
+
         # Ghi nhan cac sieu tham so
         mlflow.log_params(params)
         mlflow.log_param("n_train_samples", len(df_train))
