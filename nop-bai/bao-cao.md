@@ -55,6 +55,7 @@ Chỉ 24,8% mẫu thuộc lớp thu nhập trên 50K, nên mô hình luôn đoá
 
 ## 5. Phần Bonus Đã Thực Hiện (nếu có)
 
+- [x] Bonus 1 - Tracking MLflow từ xa với DagsHub: repo DagsHub mirror từ GitHub; job Train ghi run lên `<repo>.mlflow` qua 3 secret `MLFLOW_TRACKING_*`, gắn tag commit (ảnh `06a`, `06b`).
 - [x] Bonus 2 - Điều chỉnh ngưỡng quyết định: ngưỡng 0.30 cho F1 0.7341 so với 0.7222 ở ngưỡng 0.5 (Bước 2).
 - [x] Bonus 3 - Báo cáo precision / recall tự động: `detail.txt` chứa confusion matrix và precision/recall; bỏ sót người thu nhập cao tốn kém hơn.
 - [x] Bonus 4 - Hoàn trả về phiên bản trước: chặn Release nếu F1 mới thấp hơn `artifacts/current/report.json`.
