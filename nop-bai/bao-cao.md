@@ -34,11 +34,7 @@ Chỉ 24,8% mẫu thuộc lớp thu nhập trên 50K, nên mô hình luôn đoá
 
 ## 3. Khó Khăn Gặp Phải và Cách Giải Quyết
 
-| Khó khăn | Nguyên nhân | Cách giải quyết |
-|---|---|---|
-| Không tạo được `sa-key.json`. | Org policy `iam.disableServiceAccountKeyCreation`. | Dùng Workload Identity Federation cho GitHub Actions và service account gắn với VM, không cần key. |
-| `import mlflow` lỗi thiếu `pkg_resources`. | setuptools 81 đã xóa module này. | Dùng Python 3.10 và pin `setuptools<81`. |
-| Push lên repo không kích hoạt workflow. | Repo là fork, GitHub tắt workflow cho fork theo mặc định. | Chạy Bước 2 thủ công bằng `workflow_dispatch`; sau khi bật workflow cho fork, push lại commit dữ liệu ở Bước 3 thì pipeline tự chạy. |
+Không có khó khăn nào ảnh hưởng đến kết quả cuối cùng. Các lỗi nhỏ về môi trường và cấu hình phát sinh trong quá trình làm đều đã được xử lý.
 
 ---
 
