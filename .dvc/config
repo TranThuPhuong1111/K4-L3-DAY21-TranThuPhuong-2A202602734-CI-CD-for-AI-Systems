@@ -1,0 +1,5 @@
+[core]
+    remote = labstore
+['remote "labstore"']
+    url = gs://income-lab-ttphuong-2a202602734/dvc
+    projectname = project-ff5e0600-d6df-4763-9d4
